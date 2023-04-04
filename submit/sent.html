@@ -1,0 +1,154 @@
+<!-- Carousel - With indicators  https://getbootstrap.jp/docs/5.0/components/carousel/#with-indicators -->
+
+ <link href="saigono.css" rel="stylesheet">
+  ​
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false" data-bs-wrap="false">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="question_slide" style="padding:100px 200px 100px;">
+          <h5>演習問題 1</h5>
+          <h6>RSPO認証はなんの製品の成長を促進することを目的としているでしょう？</h6>
+          <div>
+            <div>
+              <input type="radio" name="choice" id="choice1" value="choice1">
+              <label for="choice1">ナツメヤシ</label>
+              <br>
+              <input type="radio" name="choice" id="choice2" value="choice2">
+              <label for="choice2">サトウキビ</label>
+              <br>
+              <input type="radio" name="choice" id="choice3" value="choice3">
+              <label for="choice3">パーム油</label>
+              <br>
+              <button id="check-answer-btn">答え合わせ</button>
+              <p id="result"></p>
+            </div>
+            <script>
+              const checkAnswerBtn = document.querySelector('#check-answer-btn');
+              const result = document.querySelector('#result');
+
+              checkAnswerBtn.addEventListener('click', () => {
+                const choices = document.getElementsByName('choice');
+                let selectedChoice = '';
+
+                for (const choice of choices) {
+                  if (choice.checked) {
+                    selectedChoice = choice.value;
+                    break;
+                  }
+                }
+
+                if (selectedChoice === '') {
+                  result.textContent = '選択されていません';
+                } if (selectedChoice === 'choice1') {
+                  result.textContent = '不正解..説明文を入れる';
+                }
+                if (selectedChoice === 'choice2') {
+                  result.textContent = '不正解..説明文を入れる';
+                }
+                if (selectedChoice === 'choice3') {
+                  result.textContent = '正解！ 何か文章を入れる';
+                }
+              });
+            </script>
+        </div>
+
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="question_slide" style="padding:100px 200px 100px;">
+          <h5>演習問題 2</h5>
+          <h6>水産資源や海洋環境に配慮し適切に管理された、持続可能な漁業に対する認証制度を表すマークは？</h6>
+          <input type="radio" name="choice7" id="choice4" value="choice4">
+          <label for="choice4">海のエコラベル</label>
+          <br>
+          <input type="radio" name="choice7" id="choice5" value="choice5">
+          <label for="choice5">ASC認証</label>
+          <br>
+          <input type="radio" name="choice7" id="choice6" value="choice6">
+          <label for="choice6">FSC認証</label>
+          <br>
+          <button id="check-answer-btn1">答え合わせ</button>
+          <p id="result1"></p>
+        </div>
+        <script>
+          const checkAnswerBtn1 = document.querySelector('#check-answer-btn1');
+          const result1 = document.querySelector('#result1');
+  
+          checkAnswerBtn1.addEventListener('click', () => {
+            const choices1 = document.getElementsByName('choice7');
+            let selectedChoice1 = '';
+  
+            for (const choice7 of choices1) {
+              if (choice7.checked) {
+                selectedChoice1 = choice7.value;
+                break;
+              }
+            }
+  
+  
+            if (selectedChoice1 === 'choice6') {
+              result1.textContent = '不正解..FSC認証は森林問題を解決するために作られました。';
+            }
+            if (selectedChoice1 === 'choice4') {
+              result1.textContent = '正解！水産資源と生息域の健全性、そして水産業に従事する人々の安定した生活を保証しています。';
+            }
+            if (selectedChoice1 === 'choice5') {
+              result1.textContent = '不正解..ASC認証は自然環境の汚染や資源の過剰利用の防止に加え、労働者や地域住民との誠実な関係構築を求めています。'
+  
+             }
+            if (selectedChoice1 === '') {
+              result1.textContent = '未回答';
+            }
+          });
+        </script>
+      </div>
+
+      <div class="carousel-item">
+        <div class="question_slide" style="padding:100px 200px 100px;">
+          <h5>演習問題 3</h5>
+          <h6>原料から最終製品までの履歴を追跡し、その商品がオーガニック繊維製品であることを証明するマークは？</h6>
+          <input type="radio" name="choice14" id="choice9" value="choice9">
+          <label for="choice9">JASマーク</label>
+          <br>
+          <input type="radio" name="choice14" id="choice10" value="choice10">
+          <label for="choice10">GOTS</label>
+          <br>
+          <input type="radio" name="choice14" id="choice11" value="choice11">
+          <label for="choice11">Organic content Standard</label>
+          <br>
+          <button id="check-answer-btn2">答え合わせ</button>
+          <p id="result2"></p>
+          <script>
+            const checkAnswerBtn2 = document.querySelector('#check-answer-btn2');
+            const result2 = document.querySelector('#result2');
+          
+            checkAnswerBtn2.addEventListener('click', () => {
+              const choices2= document.getElementsByName('choice14');
+              let selectedChoice2 = '';
+          
+              for (const choice14 of choices2) {
+                if (choice14.checked) {
+                  selectedChoice2 = choice14.value;
+                  break;
+                }
+              }
+          
+          
+              if (selectedChoice2 === 'choice9') {
+                result2.textContent = '不正解..JASマークは有機JASを満たす農産物などに付きます。';
+              }
+              if (selectedChoice2 === 'choice10') {
+                result2.textContent = '不正解..GOTSは有機栽培（飼育）の原料を使用し環境と社会に配慮して加工・流通されたことを示します。';
+              }
+              if (selectedChoice2 === 'choice11') {
+                result2.textContent = '正解！Organic Content Standardは原料から最終製品までの履歴を追跡し、その商品がオーガニック繊維製品であることを証明するマークです。'
+          
+              }
+              if (selectedChoice2 === '') {
+                result2.textContent = '未回答';
+              }
+            });
+          </script>
+        </div>
+      </div>
